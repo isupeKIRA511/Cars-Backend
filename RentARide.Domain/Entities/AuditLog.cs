@@ -1,0 +1,14 @@
+using System;
+
+namespace RentARide.Domain.Entities
+{
+    public class AuditLog
+    {
+        public Guid Id { get; set; } = Guid.NewGuid();
+        public string EntityName { get; set; } = string.Empty;
+        public string Action { get; set; } = string.Empty; 
+        public DateTime Timestamp { get; set; } = DateTime.UtcNow;
+        public string Changes { get; set; } = string.Empty; 
+        public string? EntityId { get; set; }
+    }
+}
